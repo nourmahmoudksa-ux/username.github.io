@@ -1,0 +1,99 @@
+/* --- THE FASHION STYLESHEET --- */
+
+/* 1. Global Reset - making it look clean */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 2. Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111;
+    margin-left: 20px;
+}
+
+/* 3. Hero Section (The Big Statement) */
+.hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+h1 {
+    font-size: clamp(5rem, 18vw, 12rem);
+    line-height: 0.85;
+    letter-spacing: -8px; /* High-fashion tight kerning */
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 14px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #666;
+}
+
+/* 4. The Lookbook Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns like a magazine spread */
+    gap: 2px; /* Thin lines between photos */
+    background-color: #eee; /* This creates the 'lines' */
+    padding: 2px;
+}
+
+.item {
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 80vh; /* Tall, vertical images look best for fashion */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Subtle zoom effect when you hover over a photo */
+.item:hover img {
+    transform: scale(1.05);
+}
+
+/* 5. Mobile Layout (Stacks photos on phones) */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        letter-spacing: -3px;
+    }
+}
