@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fashion Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <span>FASHION ARCHIVE</span>
+        <div class="links">
+            <a href="#">Lookbook</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>VIBE<br>2026</h1>
+        <p>A collection of style and motion.</p>
+    </header>
+
+    <section class="gallery">
+        <div class="item"><img src="images/look1.jpg" alt="Fashion 1"></div>
+        <div class="item"><img src="images/look2.jpg" alt="Fashion 2"></div>
+        <div class="item"><img src="images/look3.jpg" alt="Fashion 3"></div>
+    </section>
+
+</body>
+</html>
